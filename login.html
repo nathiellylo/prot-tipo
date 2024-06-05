@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Administration System</title>
+    <link rel="stylesheet" href="login.css">
+    <script>
+        function verificarLogin() {
+            var username = document.getElementsByName("username")[0].value;
+            var password = document.getElementsByName("password")[0].value;
+
+            
+            if (username === "admin" && password === "senha123") {
+                window.location.href = "system.html";
+            } else {
+                alert("Nome de usuário ou senha incorretos. Tente novamente.");
+            }
+        }
+    </script>
+</head>
+<body>
+<header>
+    <div class="img">
+    <img src="avatar1.png"width="80%">
+</div>
+</header>
+
+    <div class="login-container">
+        <h2>Login - Administration System</h2>
+        <form class="login-form" action="javascript:void(0);" onsubmit="verificarLogin();">
+            <input type="text" name="username" placeholder="Nome de usuário" required>
+            <input type="password" name="password" placeholder="Senha" required>
+          <input type="submit" value="Entrar"><center> <p> <a href="cadastro.html">Fazer cadastro</a></p><a href="https://www.exemplo.com"></a></p></center>
+        </form>
+    </div>
+</body>
+</html>
